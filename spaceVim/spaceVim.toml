@@ -1,0 +1,112 @@
+
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2020 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"#light
+    enable_guicolors = true
+    gruvbox_contrast_dark = 'hard'
+    automatic_update = true
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    filetree_direction = "left"
+    default_indent = 4
+    expand_tab = true
+    autocomplete_method = "coc"
+    buffer_index_type = 0
+    scrolloff = 8
+    spelllang = 'es_cl,en_us'
+    # left sections of statusline
+    statusline_left_sections = [
+       'winnr',
+       'major mode',
+       'filename',
+       'fileformat',
+       'minor mode lighters',
+       'version control info',
+       'search status'
+    ]
+    # right sections of statusline
+    statusline_right_sections = [
+       'cursorpos',
+       'input method',
+       'date',
+       'time'
+    ]
+    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', 'node_packages/']
+    project_rooter_outermost = false
+    enable_projects_cache = true
+    projects_cache_num = 20
+
+
+# Enable autocomplete layer
+[[layers]]
+    name = "autocomplete"
+    auto-completion-return-key-behavior = "complete"
+    auto-completion-tab-key-behavior = "cycle"
+
+[[layers]]
+    name = "lang#typescript"
+
+[[layers]]
+    name = "lang#html"
+
+[[layers]]
+    name = "denite"
+
+[[layers]]
+    name = "fzf"
+
+[[layers]]
+    name = "lang#toml"
+
+[[layers]]
+    name = "lang#php"
+
+[[layers]]
+    name = "git"
+
+[[layers]]
+    name = "lang#extra"
+
+[[layers]]
+    name = "VersionControl"
+
+# This is an example for adding custom plugins lilydjwg/colorizer
+[[custom_plugins]]
+    name = "tpope/vim-fugitive"
+
+[[custom_plugins]]
+    name = "roxma/nvim-yarp"
+
+[[custom_plugins]]
+    name = "roxma/vim-hug-neovim-rpc"
+
+[[custom_plugins]]
+    name = "Shougo/vimproc"
+
+[[custom_plugins]]
+    name = "dbeniamine/cheat.sh-vim"
+
+[[custom_plugins]]
+    name = "sainnhe/gruvbox-material"
+
+[[custom_plugins]]
+    name = "vim-scripts/phpcs.vim"
+
+[[custom_plugins]]
+    name = "mkusher/padawan.vim"
+
+[[custom_plugins]]
+    repo = "https://gitlab.com/code-stats/code-stats-vim.git"
+    merged = false
